@@ -106,13 +106,13 @@ Ao se conectar, o agente enviará a mensagem inicial: "Olá! Sou a secretar-IA d
 A seguir, alguns exemplos da Secretar-IA em ação, demonstrando o fluxo de agendamento:
 
 1.  **Exemplo de iteração na interface web**
-    ![Exemplo de iteração completa entre o agente e o ser humano.](./images/sample.png)
+    ![Exemplo de iteração completa entre o agente e o ser humano.](./images/sample.jpg)
 
 2.  **Calendário com agendamentos confirmados**
-    ![Print do calendário do google com o eveno confirmado e outros eventos que foram marcados anteriormente.](./images/sample_calendar.png)
+    ![Print do calendário do google com o eveno confirmado e outros eventos que foram marcados anteriormente.](./images/sample_calendar.jpg)
 
 3.  **Server logging**
-    ![Logs regisrado pelo servidor durante as iterações do agente. É possível ver como as tools são invocadas.](./images/sample_server_logging.png)
+    ![Logs regisrado pelo servidor durante as iterações do agente. É possível ver como as tools são invocadas.](./images/sample_server_logging.jpg)
 
 ## 📄 Estrutura do Projeto
 

@@ -1,0 +1,13 @@
+{
+    "token": "",
+    "refresh_token": "",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "client_id": ".apps.googleusercontent.com",
+    "client_secret": "",
+    "scopes": [
+        "https://www.googleapis.com/auth/calendar.events"
+    ],
+    "universe_domain": "googleapis.com",
+    "account": "",
+    "expiry": "2025-06-24T15:36:15Z"
+}

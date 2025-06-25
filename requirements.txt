@@ -1,0 +1,8 @@
+google_api_python_client==2.167.0
+google_auth_oauthlib==1.2.2
+langchain==0.3.26
+langchain_core==0.3.66
+langchain_openai==0.3.25
+protobuf==6.31.1
+python-dotenv==1.1.1
+websockets==14.2

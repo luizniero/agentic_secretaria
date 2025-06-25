@@ -13,10 +13,10 @@ async def handle_connection(websocket):
         try:
             # Use run_chat_agent para processar a mensagem
             response = run_chat_agent(message)
-            await websocket.send(f"[Assistente]: {response}")
+            await websocket.send(response)
         except Exception as e:
             print(f"Erro ao processar mensagem com o agente: {e}")
-            await websocket.send("[Assistente]: Desculpe, houve um problema ao processar sua solicitação. Por favor, tente novamente mais tarde.")
+            await websocket.send("Desculpe, houve um problema ao processar sua solicitação. Por favor, tente novamente mais tarde.")
 
 async def main():
     async with websockets.serve(handle_connection, "localhost", 8765):

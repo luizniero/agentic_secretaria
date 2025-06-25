@@ -1,19 +1,12 @@
-# AGENTIC_SECRETARIA: Assistente Virtual de Agendamento de Consultas
+# Secretar-IA: Assistente Virtual de Agendamento de Consultas
 
-Este projeto é um assistente virtual inteligente, a AGENTIC_SECRETARIA, desenvolvida para atuar como secretária da clínica médica Saúde Agêntica. Utilizando a estrutura de agentes da LangChain e a API do Google Calendar, a AGENTIC_SECRETARIA é capaz de interagir com pacientes, verificar a disponibilidade de horários e agendar consultas de forma autônoma e cordial.
-Este projeto implementa a **AGENTIC_SECRETARIA**, uma inteligência artificial que atua como secretária virtual para a clínica médica "Saúde Agêntica". Desenvolvida com base em agentes LangChain e integrada à API do Google Calendar, a AGENTIC_SECRETARIA é capaz de interagir com pacientes, verificar a disponibilidade de horários e agendar consultas de forma autônoma, cordial e empática.
-
-## Funcionalidades
-- **Agendamento de Consultas**: Coleta informações essenciais (especialidade, data/hora, nome, tipo de atendimento) e agenda a consulta no Google Calendar.
-- **Verificação de Disponibilidade**: Consulta a agenda para informar horários livres ou ocupados.
-- **Interação Conversacional**: Mantém um diálogo natural e empático com o usuário.
-- **Suporte a Especialidades Específicas**: Atualmente, suporta Cardiologia (Dr. Agente) e Cirurgia Geral (Dra. Agente).
+Este projeto implementa a **Secretar-IA**, uma inteligência artificial que atua como secretária virtual para a clínica médica "Saúde Agêntica". Desenvolvida com base em agentes LangChain e integrada à API do Google Calendar, a Secretar-IA é capaz de interagir com pacientes, verificar a disponibilidade de horários e agendar consultas de forma autônoma, cordial e empática.
 ## 🌟 Funcionalidades Principais
 
 -   **Agendamento Inteligente**: Coleta de forma conversacional todas as informações necessárias (especialidade, data/hora preferida, nome completo do paciente, se é novo ou antigo paciente, tipo de atendimento e convênio) para agendar a consulta.
 -   **Verificação de Disponibilidade**: Utiliza a API do Google Calendar para consultar horários disponíveis e sugerir opções ao paciente.
 -   **Interação Empática**: Mantém um tom de voz cordial, acolhedor e objetivo, seguindo as diretrizes de atendimento da clínica.
--   **Suporte a Especialidades**: Atualmente, a AGENTIC_SECRETARIA pode agendar consultas para **Cardiologia (Dr. Agente)** e **Cirurgia Geral (Dra. Agente)**.
+-   **Suporte a Especialidades**: Atualmente, a Secretar-IA pode agendar consultas para **Cardiologia (Dr. Agente)** e **Cirurgia Geral (Dra. Agente)**.
 -   **Gerenciamento de Histórico**: Mantém o contexto da conversa para um fluxo de agendamento mais natural.
 
 ## 🛠️ Tecnologias Utilizadas
@@ -27,7 +20,7 @@ Este projeto implementa a **AGENTIC_SECRETARIA**, uma inteligência artificial q
 
 ## 🚀 Como Executar o Projeto Localmente
 
-Siga os passos abaixo para configurar e executar a AGENTIC_SECRETARIA em seu ambiente local.
+Siga os passos abaixo para configurar e executar a Secretar-IA em seu ambiente local.
 
 ### Pré-requisitos
 
@@ -99,13 +92,13 @@ Você verá a mensagem: `Servidor WebSocket rodando em ws://localhost:8765`.
 
 ### 5. Interagindo com a AGENTIC_SECRETARIA
 
-Para interagir com o agente, você precisará de um cliente WebSocket. Você pode usar:
+Para interagir com o agente, você pode usar o cliente web fornecido na pasta `chatapp/`.
 
--   **Um cliente WebSocket em Python**: Escreva um pequeno script Python usando a biblioteca `websockets`.
--   **Extensões de navegador**: Existem extensões como "Simple WebSocket Client" para Chrome/Firefox que permitem enviar e receber mensagens.
--   **Um frontend web**: Desenvolva uma interface web simples que se conecte a `ws://localhost:8765`.
+1.  Certifique-se de que o servidor Python (`server.py`) está em execução.
+2.  Abra o arquivo `chatapp/index.html` em seu navegador.
+3.  Comece a conversar com a assistente.
 
-Ao se conectar, o agente enviará a mensagem inicial: "Olá! Sou a AGENTIC_SECRETARIA do consultório dos agentes. Como posso te ajudar hoje?".
+Ao se conectar, o agente enviará a mensagem inicial: "Olá! Sou a secretar-IA do consultório dos agentes. Como posso te ajudar hoje?".
 
 ---
 

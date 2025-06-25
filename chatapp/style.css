@@ -1,85 +1,125 @@
+/* style.css */
+
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f9;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  /* Container principal do chat */
-  #chat {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    background-color: #e5ddd5;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Cada mensagem */
-  .msg {
-    max-width: 70%;
-    padding: 12px 15px;
-    margin: 5px 10px;
-    border-radius: 12px;
-    word-wrap: break-word;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Mensagens do bot */
-  .bot {
-    background-color: #ffffff;
-    align-self: flex-start;
-    color: #333;
-    border-bottom-left-radius: 0;
-  }
-  
-  /* Mensagens do usuário */
-  .user {
-    background-color: #dcf8c6;
-    align-self: flex-end;
-    color: #000;
-    border-bottom-right-radius: 0;
-  }
-  
-  /* Rodapé com formulário */
-  #form {
-    display: flex;
-    padding: 10px;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-  }
-  
-  /* Campo de entrada */
-  #input {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-    font-size: 16px;
-    background-color: #f9f9f9;
-  }
-  
-  /* Botão de envio */
-  #send {
-    margin-left: 10px;
-    padding: 12px 20px;
-    background-color: #128c7e;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  #send:hover {
-    background-color: #075e54;
-  }
-  
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Removido o background-color: #f4f7f9; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Container principal do chat */
+#chat {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  /* Substituindo a cor sólida por uma imagem de fundo do WhatsApp */
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/12ee6265-e947-474a-a378-6d78ab0d1117/d8fr7iz-082cab4c-3f87-47e1-b2f0-efdb504372e5.jpg/v1/fill/w_1024,h_576,q_75,strp/super_hero_whatsapp_background_by_x_ama_d8fr7iz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvMTJlZTYyNjUtZTk0Ny00NzRhLWEzNzgtNmQ3OGFiMGQxMTE3XC9kOGZyN2l6LTA4MmNhYjRjLTNmODctNDdlMS1iMmYwLWVmZGI1MDQzNzJlNS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.BzcKtmJbHcafn-3f4-9tNEiybd-JbKGVeynAsEJFICI'); /* Use o URL da sua imagem de fundo aqui */
+  background-repeat: repeat; /* Garante que a imagem se repita para cobrir todo o fundo */
+  background-color: #e5ddd5; /* Cor de fallback caso a imagem não carregue */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px; /* Adiciona um espaço extra na parte inferior para a rolagem */
+}
+
+/* Cada mensagem */
+.msg {
+  max-width: 70%;
+  padding: 12px 15px;
+  margin: 5px 10px;
+  border-radius: 8px; /* Ajustado para um raio de borda mais sutil */
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative; /* Necessário para a seta */
+}
+
+/* Seta para as mensagens (opcional, para um toque mais "WhatsApp") */
+.msg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 0; /* Ajuste para criar a seta */
+}
+
+/* Mensagens do bot */
+.bot {
+  background-color: #ffffff;
+  align-self: flex-start;
+  color: #333;
+  /* border-bottom-left-radius: 0; Removido para usar o border-radius padrão e a seta */
+}
+
+.bot::before {
+  left: -8px; /* Posição da seta para a mensagem do bot */
+  border-color: transparent #ffffff transparent transparent; /* Cor da seta para o bot */
+}
+
+
+/* Mensagens do usuário */
+.user {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  color: #000;
+  /* border-bottom-right-radius: 0; Removido para usar o border-radius padrão e a seta */
+}
+
+.user::before {
+  right: -8px; /* Posição da seta para a mensagem do usuário */
+  border-color: transparent transparent transparent #dcf8c6; /* Cor da seta para o usuário */
+}
+
+/* Rodapé com formulário */
+#form {
+  display: flex;
+  padding: 10px;
+  background-color: #f0f0f0; /* Cor de fundo mais clara para o formulário */
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil para destacar */
+}
+
+/* Campo de entrada */
+#input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e0e0e0; /* Borda mais clara */
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  background-color: #ffffff; /* Fundo branco */
+}
+
+/* Botão de envio */
+#send {
+  margin-left: 10px;
+  padding: 12px 20px;
+  background-color: #25d366; /* Verde do WhatsApp */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+}
+
+#send:hover {
+  background-color: #1da851; /* Verde um pouco mais escuro no hover */
+}
+
+.madeby {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: #555;
+  background-color: #f0f0f0; /* Mesma cor de fundo do formulário */
+  /* Adicionei um pouco de padding-top para separar do formulário, se necessário */
+  padding-top: 5px;
+}

@@ -28,7 +28,7 @@ function mostrarMensagem(remetente, texto, classe) {
   var chat = document.getElementById('chat');
   var div = document.createElement('div');
   div.className = 'msg ' + classe;
-  div.textContent = remetente + ": " + texto;
+  div.textContent = texto;
   chat.appendChild(div);
   chat.scrollTop = chat.scrollHeight;
 }

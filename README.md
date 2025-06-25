@@ -100,19 +100,45 @@ Para interagir com o agente, você pode usar o cliente web fornecido na pasta `c
 
 Ao se conectar, o agente enviará a mensagem inicial: "Olá! Sou a secretar-IA do consultório dos agentes. Como posso te ajudar hoje?".
 
----
+
+## ✨ Exemplos de Interação
+
+A seguir, alguns exemplos da Secretar-IA em ação, demonstrando o fluxo de agendamento:
+
+1.  **Iniciando o Atendimento e Coletando Informações**
+    ![Iniciando o atendimento e coletando a especialidade e preferência de data.](./images/print1.png)
+
+2.  **Verificando Disponibilidade e Sugerindo Horários**
+    ![Agente verificando o Google Calendar e sugerindo horários disponíveis para o paciente.](./images/print2.png)
+
+3.  **Confirmação do Agendamento**
+    ![Agente coletando os dados finais do paciente e confirmando o agendamento no calendário.](./images/print3.png)
+
+## 🛠️ Tecnologias Utilizadas
+1. LangChain
+2. Google Calendar API
+3. OpenAi LLM Api
+4. Websocket
+
 
 ## 📄 Estrutura do Projeto
 
 ```
-agentic_secretaria/
-├── agent.py              # Lógica principal do agente LangChain
+
+-   **Python**: Linguagem de programação principal.
 ├── server.py             # Servidor WebSocket para interação
 ├── tools.py              # Ferramentas para interação com a API do Google Calendar
 ├── prompt.txt            # Prompt de sistema para o agente
+├── chatapp/              # Cliente web para interagir com o agente
+│   └── index.html
 ├── requirements.txt      # Dependências do Python
 ├── credentials.json      # Credenciais da API do Google Calendar (baixar do GCP)
 ├── token.json            # Token de autenticação do Google Calendar (gerado automaticamente)
 ├── .env                  # Variáveis de ambiente (ex: OPENAI_API_KEY)
 └── README.md             # Este arquivo
+└── images/               # Imagens e screenshots do projeto
+    ├── print1.png
+    ├── print2.png
+    └── print3.png
+
 ```
